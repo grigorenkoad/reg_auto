@@ -1,0 +1,6 @@
+ul
+  -@trucks.each do |c|
+    li
+      =link_to c.brand, edit_truck_path(c.id)
+  end
+=link_to "Back", root_path
