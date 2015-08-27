@@ -1,6 +1,4 @@
-h2
-  | Register your bike, MOTHERFUCKER!
-=simple_form_for @bike, :url => { :controller => :bikes} do |f|
+=simple_form_for @bike, :url => { :controller => :bikes, :action => :update } do |f|
   =image_tag @bike.avatar_url, width:"200px"
   br
   =f.file_field :avatar
@@ -19,3 +17,4 @@ h2
   br
 =link_to "Back", root_path
 end
+

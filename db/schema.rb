@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821144317) do
+ActiveRecord::Schema.define(version: 20150826224943) do
 
   create_table "machines", force: :cascade do |t|
     t.string   "type"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150821144317) do
     t.boolean  "cabin_for_sleeping"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
 end

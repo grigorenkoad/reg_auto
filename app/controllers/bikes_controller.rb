@@ -1,10 +1,6 @@
 class BikesController < ApplicationController
-  def index
-    @bikes = Bike.all
-  end
-
-  def show
-    @bike = Bike.find_by(params[:id])
+  def edit
+    @bike = Bike.find(params[:id])
   end
 
   def new
@@ -12,7 +8,7 @@ class BikesController < ApplicationController
   end
 
   def update
-    @bike = Bike.find_by(params[:id])
+    @bike = Bike.find(params[:id])
     if @bike.update(bike_params)
       redirect_to(machines_path)
     else
@@ -30,6 +26,6 @@ class BikesController < ApplicationController
   end
 
   def bike_params
-    params.require(:bike).permit(:brand, :max_speed, :fuel_type, :engine_capacity, :type)
+    params.require(:bike).permit(:brand, :max_speed, :avatar, :fuel_type, :engine_capacity, :type)
   end
 end

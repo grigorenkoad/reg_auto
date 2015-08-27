@@ -1,10 +1,6 @@
 class TrucksController < ApplicationController
-  def index
-    @trucks = Truck.all
-  end
-
   def edit
-    @truck = Truck.find_by(params[:id])
+    @truck = Machine.find(params[:id])
   end
 
   def new
@@ -12,7 +8,7 @@ class TrucksController < ApplicationController
   end
 
   def update
-    @truck = Truck.find_by(params[:id])
+    @truck = Truck.find(params[:id])
     if @truck.update(truck_params) 
       redirect_to(machines_path)
     else
@@ -31,6 +27,6 @@ class TrucksController < ApplicationController
 
   def truck_params
     params.require(:truck).permit(:brand, :engine_capacity, :fuel_type, :amount_guggage,
-                                    :cabin_for_sleeping, :load_capacity, :type, :doors_count)
+                                    :cabin_for_sleeping, :load_capacity, :type, :doors_count, :avatar)
   end
 end
