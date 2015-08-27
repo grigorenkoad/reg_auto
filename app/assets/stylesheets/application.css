@@ -13,13 +13,32 @@
  *= require_tree .
  *= require_self
  */
-
+ .menu {
+  float: top; 
+ }
+ .context {
+  margin-left: 20px;
+ }
+.context li{
+  text-align: center;
+  display: inline-block;
+  font-weight: 10px;
+  font-size: 23px;
+}
+.menu li{
+  text-align: left;
+  display: block;
+  font-weight: 10px;
+  font-size: 23px;
+}
+.menu a{
+  text-decoration: none;
+  color: #0066ff;
+}
+.menu a:hover {
+  color:#000;
+  font-size: 24px;
+}
 .title {
 	text-align: center;
-}
-.list {
-	margin: auto;
-	width: 80%;
-	text-align: center;
-	height: 400px;
 }

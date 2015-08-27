@@ -16,3 +16,11 @@ Car < BigCar ( не знаю как будет грузовик)
 
 ну все сделай на бутстрапе, чтоб смотрелось не уёбищно. разберить с табличной вёрстке бутстрапа. там просто надо минимально почитать
 
+1. remove unsuded files
+2. simple_form
+3. form validation on car creation
+4. restrict doors_count to be less then 5 and more then 1
+5. setup your environent to add new line at page end
+6. show ALL cars al main page
+and show categories buttons as well
+

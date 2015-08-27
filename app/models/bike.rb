@@ -1,3 +1,4 @@
 class Bike < Machine
-  validates :brand, :max_speed, :fuel_type, :engine_capacity, presence: true
+  validates :max_speed, presence: true
+  validates :max_speed, :numericality => {:less_than => 350}
 end
