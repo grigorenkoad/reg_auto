@@ -1,13 +1,16 @@
-h2
-  =@title
-ul
-  li
-    =image_tag 'car.jpg', width:"500" 
-    =link_to "Cars", cars_path
-  li
-    =image_tag 'bike.jpg', width:"500"
-    =link_to "Bikes", bikes_path
-  li
-    =image_tag 'truck.jpg', width:"500"
-    =link_to "Trucks", trucks_path
-    
+.context 
+  ul
+    -@machines.each do |m|
+      -if m.type == "Car"
+        li
+          =link_to edit_car_path(m.id)
+            =image_tag m.avatar_url, width:"300px"
+      -elsif m.type == "Bike"
+        li
+          =link_to edit_bike_path(m.id)
+            =image_tag m.avatar_url, width:"300px"
+      -else
+        li
+          =link_to edit_truck_path(m.id)
+            =image_tag m.avatar_url, width:"300px"
+    end    

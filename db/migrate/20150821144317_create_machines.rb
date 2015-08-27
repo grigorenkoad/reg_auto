@@ -10,7 +10,6 @@ class CreateMachines < ActiveRecord::Migration
       t.integer :max_speed
       t.integer :load_capacity
       t.boolean :cabin_for_sleeping
-      
 
       t.timestamps
     end

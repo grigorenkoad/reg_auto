@@ -1,33 +1,16 @@
-=form_for @car, :url => { :controller => :cars }, :html => {:class => 'title'} do |f|
-  =f.label :type
-  br
-  =f.text_field :type
+=simple_form_for @car, :url => { :controller => :cars } do |f|  
+  =f.file_field :avatar
   br
   br
-  =f.label :brand
+  =f.input :brand
   br
-  =f.text_field :brand
+  =f.input :fuel_type
   br
+  =f.input :engine_capacity
   br
-  =f.label :fuel_type
+  =f.input :amount_guggage
   br
-  =f.text_field :fuel_type
-  br
-  br
-  =f.label :engine_capacity
-  br
-  =f.text_field :engine_capacity
-  br
-  br
-  =f.label :amount_guggage
-  br
-  =f.text_field :amount_guggage
-  br
-  br
-  =f.label :doors_count
-  br
-  =f.text_field :doors_count
-  br
+  =f.input :doors_count
   br
   =f.submit
   br

@@ -1,10 +1,7 @@
 class CarsController < ApplicationController
-  def index
-    @cars = Car.all
-  end
-
-  def show
-    @car = Car.find_by(params[:id])
+  
+  def edit
+    @car = Car.find(params[:id])
   end
 
   def new
@@ -12,7 +9,7 @@ class CarsController < ApplicationController
   end
 
   def update
-    @car = Car.find_by(params[:id])
+    @car = Car.find(params[:id])
     if @car.update(car_params) 
       redirect_to(machines_path)
     else
@@ -31,6 +28,6 @@ class CarsController < ApplicationController
 
   def car_params
     params.require(:car).permit(:brand, :engine_capacity, :fuel_type, :doors_count, 
-      :amount_guggage, :type)
+      :amount_guggage, :type, :avatar)
   end
 end
