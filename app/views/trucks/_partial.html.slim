@@ -1,6 +1,7 @@
-=simple_form_for @car, :url => { :controller => :cars } do |f|  
-  =f.file_field :avatar
+=simple_fields_for @truck do |f|  
+  =image_tag @truck.avatar_url, width:"300px"
   br
+  =f.file_field :avatar
   br
   =f.input :brand
   br
@@ -12,8 +13,11 @@
   br
   =f.input :doors_count
   br
-  =f.submit
+  =f.input :load_capacity
   br
+  =f.input :cabin_for_sleeping
   br
+  =f.button :submit
+  br 
 =link_to "Back", root_path
 end
