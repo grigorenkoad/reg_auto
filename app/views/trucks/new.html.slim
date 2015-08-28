@@ -2,27 +2,5 @@ h2
   | Register your truck, MOTHERFUCKER!
 
 =simple_form_for @truck, :url => { :controller => :trucks} do |f|
-  =image_tag @truck.avatar_url, width:"200px"
-  br
-  =f.file_field :avatar
-  br
-  br
-  =f.input :brand
-  br
-  =f.input :fuel_type
-  br
-  =f.input :engine_capacity
-  br
-  =f.input :amount_guggage
-  br
-  =f.input :doors_count
-  br
-  =f.input :load_capacity
-  br
-  =f.input :cabin_for_sleeping
-  br
-  =f.button :submit
-  br 
-  br
-=link_to "Back", root_path
+  -render :partial => "partial", :locals => {:f => f} 
 end

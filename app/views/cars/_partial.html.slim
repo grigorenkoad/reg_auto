@@ -1,0 +1,21 @@
+=simple_fields_for @car do |f|  
+  =image_tag @car.avatar_url, width:"300px"
+  br
+  =f.file_field :avatar
+  br
+  br
+  =f.input :brand
+  br
+  =f.input :fuel_type
+  br
+  =f.input :engine_capacity
+  br
+  =f.input :amount_guggage
+  br
+  =f.input :doors_count
+  br
+  =f.submit
+  br
+  br
+=link_to "Back", root_path
+end

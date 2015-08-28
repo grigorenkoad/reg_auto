@@ -1,0 +1,12 @@
+=simple_fields_for @bike do |f|  
+  =image_tag @bike.avatar_url, width:"300px"
+  br
+  =f.file_field :avatar
+  =f.input :brand
+  =f.input :fuel_type
+  =f.input :engine_capacity
+  =f.input :max_speed
+  =f.button :submit
+  br
+=link_to "Back", root_path
+end

@@ -1,3 +1,8 @@
 h2
   | Register your car, MOTHERFUCKER!
-=render 'form'
+
+=simple_form_for @car, :url => { :controller => :cars } do |f|
+  
+  -render :partial => "partial", :locals => {:f => f}
+
+end
